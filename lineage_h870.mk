@@ -24,6 +24,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from h870 device
 $(call inherit-product, device/lge/h870/device.mk)
 
+# Security patch level
+PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-05-01
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH_OVERRIDE)
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h870
 PRODUCT_NAME := lineage_h870
@@ -35,6 +39,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="lucye" \
     PRODUCT_DEVICE="lucye" \
     PRODUCT_NAME="lucye_global_com" \
-    PRIVATE_BUILD_DESC="lucye_global_com-user 8.0.0 OPR1.170623.032 183301757502c release-keys"
+    PRIVATE_BUILD_DESC="lucye_global_com-user 9 PKQ1.190522.001 1930916292597 release-keys"
 
-BUILD_FINGERPRINT := "lge/lucye_global_com/lucye:8.0.0/OPR1.170623.032/183301757502c:user/release-keys"
+BUILD_FINGERPRINT := "lge/lucye_global_com/lucye:9/PKQ1.190522.001/1930916292597:user/release-keys"
